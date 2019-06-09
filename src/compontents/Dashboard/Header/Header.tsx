@@ -5,9 +5,11 @@ import style, {
   LogoContainer,
   LogoTitle,
   SideTitle,
-  NavContainer
+  LeftSide,
+  Offer,
+  OfferItem,
+  OfferLogo
 } from "./headerStyles";
-import Navigation from "../../Navigation/Navigation";
 
 interface propsI {
   className: string;
@@ -15,10 +17,20 @@ interface propsI {
 
 const Header = ({ className }: propsI) => (
   <header className={className}>
-    <NavContainer>
-      <Navigation />
-    </NavContainer>
-    <SideTitle>psi fryzjer</SideTitle>
+    <LeftSide>
+      <SideTitle>psi&nbsp;fryzjer</SideTitle>
+      <Offer>
+        <OfferItem>
+          <h2>strzyżenie</h2> <OfferLogo src="./scissors.svg" />
+        </OfferItem>
+        <OfferItem>
+          <h2>kąpiele</h2> <OfferLogo src="./scissors.svg" />
+        </OfferItem>
+        <OfferItem>
+          <h2>trymowanie</h2> <OfferLogo src="./scissors.svg" />
+        </OfferItem>
+      </Offer>
+    </LeftSide>
     <LogoContainer>
       <div>
         <LogoTitle>Adam&nbsp;Adamowski</LogoTitle>

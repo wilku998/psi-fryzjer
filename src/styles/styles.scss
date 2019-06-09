@@ -55,12 +55,12 @@ a, a:visited{
   &:after{
     content: "";
     position: absolute;
-    top: calc(100% + .5rem);
+    top: calc(100% + .3rem);
     left: 50%;
     width: 70%;
     transform: translateX(-50%);
     height: 2px;
-    background-color: white;
+    background-color: rgba(white, .5);
     animation: activeNavLink 2s;
   }
 }
