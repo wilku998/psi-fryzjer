@@ -1,7 +1,26 @@
+@keyframes activeNavLink {
+  from {
+    transform: translateX(-50%) scaleX(50%);
+
+  }
+  to {
+    transform: translateX(-50%) scaleX(100%);
+
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
 
 html {
@@ -14,7 +33,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   position: relative;
-  background-color: lightblue;
+  padding: 1rem;
+  background-color: #52B87E;
 }
 
 button {
@@ -29,3 +49,18 @@ a, a:visited{
   color: inherit;
   text-decoration: none;
 };
+
+.active{
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    top: calc(100% + .5rem);
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: white;
+    animation: activeNavLink 2s;
+  }
+}
