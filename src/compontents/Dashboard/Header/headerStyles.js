@@ -14,6 +14,10 @@ export default Header => styled(Header)`
   justify-items: center;
   position: relative;
 
+  ${media.big`
+    padding: 0 3rem 3rem 3rem;
+  `}
+
   &:before{
     content: "";
     position: absolute;
@@ -36,6 +40,9 @@ export const LogoContainer = styled.div`
   ${media.big`
     grid-gap: 4rem 0;
   `}
+  ${media.medium_2`
+    margin: 3rem 0;
+  `}
 `;
 
 export const Logo = styled(ReactSVG)`
@@ -52,6 +59,12 @@ export const LeftSide = styled.div`
   display: grid;
   grid-template-columns: repeat(2, max-content);
   margin-right: 6rem;
+  ${media.big`
+    margin-right: 3rem;
+  `}
+  ${media.medium_2`
+    display: none;
+  `}
 `;
 
 export const SideTitle = styled.h1`
@@ -70,6 +83,10 @@ export const Offer = styled.div`
   display: grid;
   margin-left: 4rem;
   grid-gap: 2rem;
+
+  ${media.big`
+    margin-left: 2rem;
+  `}
 `;
 export const OfferItem = styled.div`
   background-color: ${props => props.theme.colorGreyLight2};

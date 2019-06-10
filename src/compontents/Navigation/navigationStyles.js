@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../styledComponents/breakPoints";
 
 export const NavigationContainer = styled.nav`
   position: fixed;
@@ -13,11 +14,23 @@ export const NavigationContainer = styled.nav`
   height: 6rem;
   align-items: center;
   z-index: 100;
-  transition: all .35s;
+  transition: all 0.35s;
   ${props => `
-    background-color: ${props.topposition >=10 ? props.theme.colorPrimary1 : props.theme.colorPrimary3};
+    background-color: ${
+      props.topposition >= 10
+        ? props.theme.colorPrimary1
+        : props.theme.colorPrimary3
+    };
     top: ${props.topposition}px;
-    `}
+  `}
+
+  ${media.big`
+    padding: 0 3rem;
+  `}
+
+  ${media.medium_2`
+    justify-content: center;
+  `}
 `;
 
 export const NavigationContent = styled.ul`

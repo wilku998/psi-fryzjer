@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import media from './breakPoints';
 import { activeNavLink } from './animations';
 
 export default createGlobalStyle`
@@ -19,6 +20,9 @@ export default createGlobalStyle`
     html {
         font-size: 62.5%;
         scroll-behavior: smooth;
+        ${media.medium`
+            font-size: 50%;
+        `}
     }
 
     body {
@@ -28,6 +32,7 @@ export default createGlobalStyle`
         position: relative;
         padding: 10px;
         background-color: #52B87E;
+
     }
 
     button {

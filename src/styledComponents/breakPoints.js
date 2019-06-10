@@ -1,7 +1,9 @@
 import { css } from 'styled-components';
 
 export const sizes = {
-	big: 71.25, //1140
+    big: 71.25, //1140
+    medium: 56.25, //900
+    medium_2: 43.75 //700
 };
 
 let media = {};
