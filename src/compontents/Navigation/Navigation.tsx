@@ -1,31 +1,58 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
-import style, { NavigationContent } from "./navigationStyles";
+import { NavigationContainer, NavigationContent } from "./navigationStyles";
 
-interface propsI {
-  className: string;
-  history: any;
-}
+const { useEffect, useState } = React;
 
-const Navigation = ({ className }: propsI) => {
+interface propsI {}
+
+const Navigation = () => {
+  const getTopPositon = () => {
+    const scrollPos: number = window.pageYOffset;
+    return scrollPos >= 10 ? 0 : 10;
+  };
+
+  const [topPosition, setTopPosition] = useState(getTopPositon());
+
+  const onScroll = () => {
+    setTopPosition(getTopPositon());
+  };
+
+  const removeOnScroll = () => window.removeEventListener("scroll", onScroll);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      removeOnScroll();
+    };
+  }, []);
+
   return (
-    <nav className={className}>
+    <NavigationContainer topposition={topPosition}>
       <NavigationContent>
         <li>
-          <NavLink activeClassName="active" to="/">Strona główna</NavLink>
+          <NavLink activeClassName="active" to="/">
+            Strona główna
+          </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/salon">Salon</NavLink>
+          <NavLink activeClassName="active" to="/salon">
+            Salon
+          </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/umow-wizyte">Umów wizytę</NavLink>
+          <NavLink activeClassName="active" to="/umow-wizyte">
+            Umów wizytę
+          </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/kontakt">Kontakt</NavLink>
+          <NavLink activeClassName="active" to="/kontakt">
+            Kontakt
+          </NavLink>
         </li>
       </NavigationContent>
-    </nav>
+    </NavigationContainer>
   );
 };
-export default style(Navigation);
+export default Navigation;

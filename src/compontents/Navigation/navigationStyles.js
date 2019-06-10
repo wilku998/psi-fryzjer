@@ -1,27 +1,30 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export default (Navigation) => styled(Navigation)`
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    width: calc(100% - 2rem);
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
-    display: grid;
-    justify-content: end;
-    padding: 0 6rem;
-    background-color: ${props => props.theme.colorPrimary1};
-    height: 6rem;
-    align-items: center;
-    z-index: 100;
+export const NavigationContainer = styled.nav`
+  position: fixed;
+  left: 10px;
+  width: calc(100% - 20px);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: grid;
+  justify-content: end;
+  padding: 0 6rem;
+  height: 6rem;
+  align-items: center;
+  z-index: 100;
+  transition: all .35s;
+  ${props => `
+    background-color: ${props.topposition >=10 ? props.theme.colorPrimary1 : props.theme.colorPrimary3};
+    top: ${props.topposition}px;
+    `}
 `;
 
 export const NavigationContent = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    & > li {
-        padding: .5rem 2rem;
-        line-height: 1;
-    }
-`
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  & > li {
+    padding: 0.5rem 2rem;
+    line-height: 1;
+  }
+`;

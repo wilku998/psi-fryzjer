@@ -12,6 +12,17 @@ export default Header => styled(Header)`
   grid-template-columns: max-content 1fr;
   align-items: center;
   justify-items: center;
+  position: relative;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    height: 6rem;
+    width: 100%;
+    background-color: ${props => props.theme.colorPrimary1};
+  }
 `;
 
 export const LogoContainer = styled.div`
