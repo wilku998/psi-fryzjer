@@ -5,8 +5,8 @@ import media from "../../../styledComponents/breakPoints";
 
 export default Header => styled(Header)`
   background-color: ${props => props.theme.colorPrimary1};
-  margin-top: 6rem;
-  padding: 0 6rem 6rem 6rem;
+  margin-top: 5rem;
+  padding: 0 5rem 5rem 5rem;
   color: white;
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -21,9 +21,9 @@ export default Header => styled(Header)`
   &:before{
     content: "";
     position: absolute;
-    top: -6rem;
+    top: -5rem;
     left: 0;
-    height: 6rem;
+    height: 5rem;
     width: 100%;
     background-color: ${props => props.theme.colorPrimary1};
   }
@@ -58,7 +58,7 @@ export const LeftSide = styled.div`
   grid-column: 1/2;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  margin-right: 6rem;
+  margin-right: 5rem;
   ${media.big`
     margin-right: 3rem;
   `}
@@ -92,7 +92,10 @@ export const OfferItem = styled.div`
   background-color: ${props => props.theme.colorGreyLight2};
   display: grid;
   grid-template-rows: max-content 1fr;
+  justify-items: center;
+
   & > h2 {
+    width: 100%;
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
@@ -103,6 +106,7 @@ export const OfferItem = styled.div`
 
 export const OfferLogo = styled(ReactSVG)`
   fill: ${props => props.theme.colorPrimary2};
+  width: 10rem;
   padding: 2rem;
 `;
 

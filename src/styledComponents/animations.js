@@ -1,11 +1,21 @@
 import { keyframes } from "styled-components";
 
-const activeNavLink = keyframes`
+export const activeNavLink = keyframes`
     from {
-        transform: translateX(-50%) scaleX(50%);
+        width: 10%;
+    }
+    to {
+        width: 70%;
+    }
+`;
+
+export const opacityAnimation = keyframes`
+    from {
+        opacity: 0
 
     }
     to {
-        transform: translateX(-50%) scaleX(100%);
+        opacity: 1
     }
-`
+`;
+

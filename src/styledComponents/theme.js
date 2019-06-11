@@ -2,7 +2,9 @@ export default {
     colorPrimary1: '#61D292',
     colorPrimary2: '#52B87E',
     colorPrimary3: '#429566',
-
+	colorSecondary1: '#FFC80D',
+    colorSecondary2: '#E8A00C',
+    colorSecondary3: '#FF9100',
     colorGreyLight1: '#faf9f9',
 	colorGreyLight2: '#f4f2f2',
 	colorGreyLight3: '#f0eeee',

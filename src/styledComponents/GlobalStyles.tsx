@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import media from './breakPoints';
-import { activeNavLink } from './animations';
 
 export default createGlobalStyle`
     * {
@@ -33,6 +32,9 @@ export default createGlobalStyle`
         padding: 10px;
         background-color: #52B87E;
 
+        ${media.small`
+            padding: 0;
+        `}
     }
 
     button {
@@ -47,20 +49,4 @@ export default createGlobalStyle`
         color: inherit;
         text-decoration: none;
     };
-
-    .active{
-        position: relative;
-        &:after{
-            content: "";
-            position: absolute;
-            top: calc(100% + .3rem);
-            left: 50%;
-            width: 70%;
-            transform: translateX(-50%);
-            height: 2px;
-            background-color: white;
-            opacity: 0.5;
-            animation: activeNavLink 2s;
-        }
-    }
 `;
