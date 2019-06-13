@@ -6,7 +6,8 @@ import media from "../../../styledComponents/breakPoints";
 export default Header => styled(Header)`
   background-color: ${props => props.theme.colorPrimary1};
   margin-top: 5rem;
-  padding: 0 5rem 5rem 5rem;
+  padding: 0 5rem 2rem 5rem;
+  z-index: 10;
   color: white;
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -82,7 +83,7 @@ export const SideTitle = styled.h1`
 export const Offer = styled.div`
   display: grid;
   margin-left: 4rem;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 
   ${media.big`
     margin-left: 2rem;
@@ -93,7 +94,13 @@ export const OfferItem = styled.div`
   display: grid;
   grid-template-rows: max-content 1fr;
   justify-items: center;
-
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, .1);
+  border-radius: .15rem;
+  overflow: hidden;
+  transition: all .2s;
+  &:hover{
+    transform: translateX(1rem);
+  }
   & > h2 {
     width: 100%;
     font-size: 2rem;
@@ -106,7 +113,7 @@ export const OfferItem = styled.div`
 
 export const OfferLogo = styled(ReactSVG)`
   fill: ${props => props.theme.colorPrimary2};
-  width: 10rem;
+  width: 12rem;
   padding: 2rem;
 `;
 

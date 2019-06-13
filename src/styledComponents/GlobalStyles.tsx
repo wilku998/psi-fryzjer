@@ -39,10 +39,13 @@ export default createGlobalStyle`
 
     button {
         cursor: pointer;
-    }
+        &:focus{
+            outline: none;
+        }
+        &:disabled{
+            cursor: default;
 
-    button:disabled {
-        cursor: default;
+        }
     }
 
     a, a:visited{
