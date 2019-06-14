@@ -6,7 +6,7 @@ interface propsI {
 };
 
 const Offer = ({ className }: propsI) => (
-  <section className={className}>
+  <section className={`${className} gridTwoColumns`}>
     <Title>Usługi</Title>
     <Paragraph>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula
@@ -19,7 +19,7 @@ const Offer = ({ className }: propsI) => (
       dapibus quis. Suspendisse lobortis arcu at augue tincidunt tempor.
     </Paragraph>
     <Button>Umów wizytę</Button>
-    <Image />
+    <Image src="./golden-retrivier.jpg" />
   </section>
 );
 

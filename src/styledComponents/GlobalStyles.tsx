@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import media from './breakPoints';
+import media from "./breakPoints";
 
 export default createGlobalStyle`
     * {
@@ -52,4 +52,21 @@ export default createGlobalStyle`
         color: inherit;
         text-decoration: none;
     };
+
+    .gridTwoColumns{
+        display: grid;
+        padding: 0 8rem;
+        grid-gap: 0 8rem;
+
+        & > * {
+            ${media.medium_2`
+                grid-column: 1/3 !important;
+            `}
+        }
+
+        ${media.big`
+        padding: 0 4rem;
+        grid-gap: 0 4rem;
+        `}
+    }
 `;

@@ -5,7 +5,7 @@ export default Packets => styled(Packets)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, max-content);
-  margin-top: 15rem;
+  margin: 12rem 0;
   grid-gap: 0 4rem;
   align-items: start;
   background: url("./packets-background.jpg") center/cover fixed;
