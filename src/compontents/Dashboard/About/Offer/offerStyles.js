@@ -25,9 +25,7 @@ export const Image = styled.img`
   box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+
 
   ${media.medium_2`
   height: 30rem;

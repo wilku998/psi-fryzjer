@@ -37,6 +37,11 @@ export default createGlobalStyle`
         `}
     }
 
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
     button {
         cursor: pointer;
         &:focus{
