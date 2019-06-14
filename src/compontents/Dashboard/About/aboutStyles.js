@@ -8,7 +8,7 @@ export default About => styled(About)`
 
 export const Content = styled.div`
   clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
-  padding: 7rem 4rem;
+  padding: 13rem 0;
   background-color: ${props => props.theme.colorGreyLight2};
   color: ${props => props.theme.colorGreyDark1};
 

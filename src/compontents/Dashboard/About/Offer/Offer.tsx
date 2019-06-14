@@ -1,13 +1,12 @@
 import * as React from "react";
-import style, { Title, Paragraph, Image } from "./offerStyles";
-import Button from "../../../Abstracts/Button";
+import style, { Title, Paragraph, Image, Button } from "./offerStyles";
 
 interface propsI {
   className: string;
 };
 
 const Offer = ({ className }: propsI) => (
-  <div className={className}>
+  <section className={className}>
     <Title>Usługi</Title>
     <Paragraph>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula
@@ -21,7 +20,7 @@ const Offer = ({ className }: propsI) => (
     </Paragraph>
     <Button>Umów wizytę</Button>
     <Image />
-  </div>
+  </section>
 );
 
 export default style(Offer);

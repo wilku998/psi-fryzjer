@@ -1,4 +1,6 @@
 export default {
+	darkBorder: '1px solid #333',
+	lightBorder: '1px solid #ccc',
     colorPrimary1: '#61D292',
     colorPrimary2: '#52B87E',
     colorPrimary3: '#429566',

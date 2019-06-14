@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export default styled.button`
-  grid-column: 1/2;
+export const Button = styled.button`
   border: none;
-  margin-top: 4rem;
-  justify-self: start;
   padding: 1rem 2rem;
   color: white;
   background-color: ${props => props.theme.colorPrimary3};
+`;
+
+export const ButtonWithShadow = styled(Button)`
   transition: all 0.2s;
   position: relative;
   &:hover {
