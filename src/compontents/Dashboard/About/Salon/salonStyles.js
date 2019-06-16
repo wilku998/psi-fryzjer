@@ -49,12 +49,15 @@ export const Image = styled.img`
 
 export const Title = styled.h1`
   font-size: 2.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1;
   &:not(:first-of-type) {
     margin-top: 4rem;
   }
 `;
 
 export const Paragraph = styled.p`
+  padding-top: 1rem;
   text-align: justify;
+  border-top: ${props => props.theme.lightBorder}
 `;

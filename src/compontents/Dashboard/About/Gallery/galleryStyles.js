@@ -15,6 +15,10 @@ export default Gallery => styled(Gallery)`
     grid-gap: 1rem;   
   `}
 
+  ${media.medium_2`
+    margin-top: 0;
+  `}
+
   ${media.small`
     height: 50rem;
   `}

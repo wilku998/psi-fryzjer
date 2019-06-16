@@ -13,9 +13,10 @@ export const Button = styled(ButtonWithShadow)`
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   font-size: 3.5rem;
   letter-spacing: 0.3rem;
+  line-height: 1;
 `;
 
 export const Image = styled.img`
@@ -48,8 +49,13 @@ export const Paragraph = styled.p`
   text-align: justify;
   line-height: 2;
   margin-bottom: 4rem;
+  padding-top: 1rem;
+  border-top: ${props => props.theme.lightBorder}
 
   ${media.medium_2`
   margin-top: 4rem;
+  border-top: none;
+  padding-top: 0;
+  
 `}
 `;
