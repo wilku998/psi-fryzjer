@@ -4,7 +4,7 @@ import style, { Title, List, PacketButton } from "./packetStyles";
 const Packet = ({ className, packet }) => {
   const { title, offers } = packet;
   return (
-    <div className={className}>
+    <div data-aos="flip-right" className={className}>
       <Title>{title}</Title>
       <List>
         {offers.map(e => (

@@ -44,6 +44,7 @@ const Navigation = () => {
         ].map((e, i) => (
           <li key={i}>
             <NavLink
+              exact
               activeClassName={activeClassName}
               to={e.link}
               onClick={onItemClick}

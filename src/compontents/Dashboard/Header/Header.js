@@ -13,7 +13,7 @@ import style, {
 
 const Header = ({ className }) => (
   <header className={className}>
-    <LeftSide>
+    <LeftSide data-aos="fade-right">
       <SideTitle>psi&nbsp;fryzjer</SideTitle>
       <Offer>
         <OfferItem>
@@ -27,7 +27,7 @@ const Header = ({ className }) => (
         </OfferItem>
       </Offer>
     </LeftSide>
-    <LogoContainer>
+    <LogoContainer data-aos="zoom-in">
       <div>
         <LogoTitle>Adam&nbsp;Adamowski</LogoTitle>
         <span>Profesionalne usługi kosmetyczne dla zwięrząt od 2005.</span>

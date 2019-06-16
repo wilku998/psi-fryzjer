@@ -3,8 +3,8 @@ import style, { Title, Paragraph, Image, Button } from "./offerStyles";
 
 const Offer = ({ className }) => (
   <section className={`${className} gridTwoColumns`}>
-    <Title>Usługi</Title>
-    <Paragraph>
+    <Title data-aos="fade-right">Usługi</Title>
+    <Paragraph data-aos="fade-right">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula
       diam felis, sit amet posuere neque mollis quis. Phasellus cursus, tortor a
       placerat accumsan, nunc purus mollis nibh, ac rutrum urna libero blandit
@@ -14,7 +14,7 @@ const Offer = ({ className }) => (
       commodo a metus. Nullam lacinia accumsan sapien, pharetra rutrum ante
       dapibus quis. Suspendisse lobortis arcu at augue tincidunt tempor.
     </Paragraph>
-    <Button>Umów wizytę</Button>
+    <Button data-aos="fade-right">Umów wizytę</Button>
     <Image src="./golden-retrivier.jpg" />
   </section>
 );
