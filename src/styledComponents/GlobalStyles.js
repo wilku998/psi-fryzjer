@@ -37,6 +37,10 @@ export default createGlobalStyle`
         `}
     }
 
+    #app{
+        overflow-x: hidden;
+    }
+
     img {
         object-fit: cover;
         width: 100%;

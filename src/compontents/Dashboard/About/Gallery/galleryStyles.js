@@ -24,7 +24,7 @@ export default Gallery => styled(Gallery)`
   `}
 `;
 
-export const Image = styled.img`
+export const styleImage = Image => styled(Image)`
   &:nth-child(1) {
     grid-row: 1/2;
     grid-column: 1/2;

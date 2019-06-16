@@ -17,9 +17,13 @@ export const Title = styled.h1`
   font-size: 3.5rem;
   letter-spacing: 0.3rem;
   line-height: 1;
+
+  ${media.medium_2`
+    margin-bottom: 3rem;
+  `}
 `;
 
-export const Image = styled.img`
+export const styleImage = (Image) => styled(Image)`
   grid-row: 1/4;
   grid-column: 2/3;
   border-radius: 0.3rem;
@@ -50,12 +54,12 @@ export const Paragraph = styled.p`
   line-height: 2;
   margin-bottom: 4rem;
   padding-top: 1rem;
-  border-top: ${props => props.theme.lightBorder}
+  border-top: ${props => props.theme.lightBorder};
 
   ${media.medium_2`
-  margin-top: 4rem;
-  border-top: none;
-  padding-top: 0;
-  
-`}
+    margin-top: 4rem;
+    border-top: none;
+    padding-top: 0;
+  `}
+
 `;

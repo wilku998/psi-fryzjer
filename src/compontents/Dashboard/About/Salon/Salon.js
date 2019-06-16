@@ -1,5 +1,9 @@
 import React from "react";
-import style, { ImagesContainer, Image, Title, Paragraph } from "./salonStyles";
+import style, { ImagesContainer, styleImage, Title, Paragraph } from "./salonStyles";
+
+const Image = styleImage(({className, imageUrl}) => (
+  <img className={`${className} b-lazy`} data-src={imageUrl} />
+));
 
 const Salon = ({ className }) => (
   <section className={`${className} gridTwoColumns`}>
@@ -19,9 +23,9 @@ const Salon = ({ className }) => (
       lobortis arcu at augue tincidunt tempor.
     </Paragraph>
     <ImagesContainer>
-      <Image pos={1} src="./golden-retrivier.jpg" />
-      <Image pos={2} src="./golden-retrivier.jpg" />
-      <Image pos={3} src="./golden-retrivier.jpg" />
+      <Image pos={1} imageUrl="./golden-retrivier.jpg" />
+      <Image pos={2} imageUrl="./golden-retrivier.jpg" />
+      <Image pos={3} imageUrl="./golden-retrivier.jpg" />
     </ImagesContainer>
   </section>
 );

@@ -1,5 +1,9 @@
 import React from "react";
-import style, { Title, Paragraph, Image, Button } from "./offerStyles";
+import style, { Title, Paragraph, styleImage, Button } from "./offerStyles";
+
+const Image = styleImage(({className, imageUrl}) => (
+  <img className={`${className} b-lazy`} data-src={imageUrl} />
+));
 
 const Offer = ({ className }) => (
   <section className={`${className} gridTwoColumns`}>
@@ -15,7 +19,7 @@ const Offer = ({ className }) => (
       dapibus quis. Suspendisse lobortis arcu at augue tincidunt tempor.
     </Paragraph>
     <Button data-aos="fade-right">Umów wizytę</Button>
-    <Image src="./golden-retrivier.jpg" />
+    <Image imageUrl="./golden-retrivier.jpg" />
   </section>
 );
 

@@ -16,7 +16,7 @@ export const ImagesContainer = styled.div`
   `}
 `;
 
-export const Image = styled.img`
+export const styleImage = (Image) => styled(Image)`
   width: 60%;
   height: 60%;
   object-fit: cover;
