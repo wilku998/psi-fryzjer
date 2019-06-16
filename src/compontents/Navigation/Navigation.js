@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import {
@@ -13,7 +13,7 @@ const { useEffect, useState } = React;
 
 const Navigation = () => {
   const getTopPositon = () => {
-    const scrollPos: number = window.pageYOffset;
+    const scrollPos = window.pageYOffset;
     return scrollPos >= 10 ? 0 : 10;
   };
 

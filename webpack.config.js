@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = (env) => {
 	const isProduction = env === 'production';
 	return {
-		entry: [ 'babel-polyfill', './src/app.tsx' ],
+		entry: ['babel-polyfill', './src/app.js'],
 		output: {
 			path: path.resolve(__dirname, 'public', 'dist'),
 			filename: 'bundle.js'
@@ -12,13 +12,9 @@ module.exports = (env) => {
 		module: {
 			rules: [
 				{
-					test: /\.tsx?$/,
-					loader: 'babel-loader'
-				},
-				{
 					test: /\.js$/,
-					use: [ 'source-map-loader' ],
-					enforce: 'pre'
+					exclude: '/node_modules/',
+					use: 'babel-loader'
 				},
 				{
 					test: /\.s?css$/,
@@ -32,9 +28,6 @@ module.exports = (env) => {
 					]
 				}
 			]
-		},
-		resolve: {
-			extensions: [ '.ts', '.tsx', '.js' ]
 		},
 		plugins: [
 			new MiniCssExtractPlugin({

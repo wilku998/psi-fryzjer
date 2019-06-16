@@ -1,11 +1,7 @@
-import * as React from "react";
+import React from "react";
 import style, { Image } from "./galleryStyles";
 
-interface propsI {
-  className: string;
-};
-
-const Galerry = ({ className }: propsI) => (
+const Galerry = ({ className }) => (
   <section className={className}>
     <Image src="./gallery-1-converted.jpg" />
     <Image src="./gallery-2-converted.jpg" />

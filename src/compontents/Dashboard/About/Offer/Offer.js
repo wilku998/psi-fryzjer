@@ -1,11 +1,7 @@
-import * as React from "react";
+import React from "react";
 import style, { Title, Paragraph, Image, Button } from "./offerStyles";
 
-interface propsI {
-  className: string;
-};
-
-const Offer = ({ className }: propsI) => (
+const Offer = ({ className }) => (
   <section className={`${className} gridTwoColumns`}>
     <Title>Usługi</Title>
     <Paragraph>

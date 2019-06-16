@@ -1,13 +1,7 @@
-import * as React from "react";
+import React from "react";
 import style, { Title, List, PacketButton } from "./packetStyles";
 
-import { PacketI } from "../../../data/packets";
-interface propsI {
-  className: string;
-  packet: PacketI;
-}
-
-const Packet = ({ className, packet }: propsI) => {
+const Packet = ({ className, packet }) => {
   const { title, offers } = packet;
   return (
     <div className={className}>

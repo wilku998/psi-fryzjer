@@ -1,11 +1,7 @@
-import * as React from "react";
+import React from "react";
 import style, {Item} from "./footerStyles";
 
-interface propsI {
-  className: string;
-}
-
-const Footer = ({ className }: propsI) => (
+const Footer = ({ className }) => (
   <footer className={className}>
       <Item>
         Strona została stworzona dla celów edukacyjnych. Zaprezentowana oferta

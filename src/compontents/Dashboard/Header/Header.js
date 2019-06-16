@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import style, {
   Logo,
@@ -11,11 +11,7 @@ import style, {
   OfferLogo
 } from "./headerStyles";
 
-interface propsI {
-  className: string;
-}
-
-const Header = ({ className }: propsI) => (
+const Header = ({ className }) => (
   <header className={className}>
     <LeftSide>
       <SideTitle>psi&nbsp;fryzjer</SideTitle>

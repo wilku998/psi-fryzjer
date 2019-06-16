@@ -1,17 +1,13 @@
-import * as React from "react";
+import React from "react";
 
-import packetsData, { PacketI } from "../../../../data/packets";
+import packetsData from "../../../../data/packets";
 import style, { Title } from "./packetsStyles";
 import Packet from "../../../Abstracts/Packet/Packet";
 
-interface propsI {
-  className: string;
-}
-
-const Packets = ({ className }: propsI) => (
+const Packets = ({ className }) => (
   <section className={className}>
     <Title>Pakiety</Title>
-    {packetsData.map((packet: PacketI) => (
+    {packetsData.map((packet) => (
       <Packet key={packet.title} packet={packet} />
     ))}
   </section>

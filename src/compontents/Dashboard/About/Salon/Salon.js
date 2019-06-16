@@ -1,11 +1,7 @@
-import * as React from "react";
+import React from "react";
 import style, {ImagesContainer, Image, Title, Paragraph} from "./salonStyles";
 
-interface propsI {
-  className: string;
-}
-
-const Salon = ({ className }: propsI) => (
+const Salon = ({ className }) => (
   <section className={`${className} gridTwoColumns`}>
     <Title>Profesionalny salon</Title>
     <Paragraph>

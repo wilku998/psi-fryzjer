@@ -36,9 +36,3 @@ export default [
     ]
   }
 ];
-
-export interface PacketI {
-  title: string;
-  price: number;
-  offers: string[];
-}
